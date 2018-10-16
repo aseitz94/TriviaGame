@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+
 //creat variables for each question
 var questions = [
     {q:"Who played the first doctor in the reboot 2005?", a:"Christopher Eccelston"},
@@ -17,10 +20,23 @@ var correct = 0;
 var incorrect = 0;
 var unanswered = 0;
 var questionIndex = 0;
+
+//Click function
+$(".answer").on("click", function(){
 //if correct answer is chosen add 1 to correct answers
-    if (userInput === questions[questionIndex].a){
-        console.log(win)
-    }
+  console.log("hi");})
+ //   function inputChoice(){
+  //  for(var i = 1; i <= 10; i++)
+    
+    //var radios = document.getElementsByName("inlineRadioOptions" + i);
+  //  for (var j = 0; j< radios.length; j++)
+  //  var radio = radios[j];
+  //  if (radio.value == "correct" && radio.checked){
+  //      correct++;
+   //      console.log(win)
+//    }
+
+    //inputChoice()
 //if wrong answer is chosen add 1 to incorrect answers
 
 //if no answer is chosen and timer runs out add 1 to missed answers
@@ -28,4 +44,5 @@ var questionIndex = 0;
 //create timer
 
 //display timer
-
+//})
+})
