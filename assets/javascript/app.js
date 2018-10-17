@@ -1,48 +1,41 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
 
-//creat variables for each question
-var questions = [
-    {q:"Who played the first doctor in the reboot 2005?", a:"Christopher Eccelston"},
-    {q:"How many tv spin-offs does Doctor Who have?", a:"6"},
-    {q:"Who were the main enemies in the 50th Anniversary?", a:"zygons"},
-    {q:"Cassandra is the name the female version of the Master takes on." , a:"f"},
-    {q:"Who was the main character in the episode 'Blink'?", a:"Sally Sparrow"},
-    {q:"What companion has her own spin-off and appears in both the reboot and the classic series", a:"Sarah Jane"},
-    {q:"There was a great war between Time Lords and Vampires", a:"t"},
-    {q:"Who suceeded Harriot Jones as the Prime Minister", a:"Harold Saxon"},
-    {q:"Who are the Doctor's archenemies?", a:"Daleks"},
-    {q:"Weeping Angels first appear in the episode'The Angels Take Manhatten'.", a:"f"},
-]
+    //creat variables
+    var userInput
+    var correct = 0;
+    var incorrect = 0;
+    var unanswered = 0;
+    var questionIndex = 0;
 
-var userInput
-var correct = 0;
-var incorrect = 0;
-var unanswered = 0;
-var questionIndex = 0;
-
-//Click function
-$(".answer").on("click", function(){
-//if correct answer is chosen add 1 to correct answers
-  console.log("hi");})
- //   function inputChoice(){
-  //  for(var i = 1; i <= 10; i++)
+    //Click function
+    $(".answer").on("click", function () {
+        //if correct answer is chosen add 1 to correct answers
     
-    //var radios = document.getElementsByName("inlineRadioOptions" + i);
-  //  for (var j = 0; j< radios.length; j++)
-  //  var radio = radios[j];
-  //  if (radio.value == "correct" && radio.checked){
-  //      correct++;
-   //      console.log(win)
-//    }
+        function inputChoice() {
+            for (let i = 1; i <= 10; i++) {
+                var radios = document.getElementsByName("inlineRadioOptions" + i);
+                    for (let j = 0; j < radios.length; j++) {
+                     var radio = radios[j];
+                        if (radio.value == "correct" && radio.checked) {
+                            correct++;
+                            console.log(correct)
+                    }
+                        else{
+                            incorrect++;
+                            console.log(incorrect)
+                        }
+                }
+            }
+        }
 
-    //inputChoice()
-//if wrong answer is chosen add 1 to incorrect answers
+        inputChoice()
+        //if wrong answer is chosen add 1 to incorrect answers
 
-//if no answer is chosen and timer runs out add 1 to missed answers
+        //if no answer is chosen and timer runs out add 1 to missed answers
+    })
+    //create timer
 
-//create timer
+    //display timer
 
-//display timer
-//})
 })
